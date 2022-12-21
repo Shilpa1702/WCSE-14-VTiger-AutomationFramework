@@ -4,14 +4,14 @@
   <test thread-count="5" name="Test(failed)">
     <groups>
       <run>
-        <include name="ReggressionSuite"/>
+        <include name="SmokeSuite"/>
       </run>
     </groups>
     <classes>
       <class name="vtiger.OrganizationTestng.CreateOrganizationTest">
         <methods>
+          <include name="createOrgTest"/>
           <include name="acConfig"/>
-          <include name="demoTest"/>
           <include name="asConfig"/>
           <include name="bmConf"/>
           <include name="bsConfig"/>

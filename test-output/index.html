@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\shilp\eclipse-workspace\Vtiger.WCSE14.AutomationFramework\testng_Reggression.xml</span>
+                    <span>C:\Users\shilp\eclipse-workspace\Vtiger.WCSE14.AutomationFramework\testng_Smoke.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,  1 skipped,  </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="vtiger.OrganizationTestng.CreateOrganizationTest" class="method navigator-link" hash-for-method="demoTest">demoTest</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="vtiger.OrganizationTestng.CreateOrganizationTest" class="method navigator-link" hash-for-method="createOrgTest">createOrgTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Suite -->
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,66 +119,30 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-skipped">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">vtiger.OrganizationTestng.CreateOrganizationTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="demoTest">
-                  </a> <!-- demoTest -->
-                  <span class="method-name">demoTest</span>
-                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
-Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
-System info: host: &apos;DELL&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b34b2631a6a0c29a50c98110a6568f7e, get {url=http://localhost:8888}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\shilp\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55856/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b34b2631a6a0c29a50c98110a6568f7e
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:571)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
-	at vtiger.GenericUtilities.BaseClass.bcConfig(BaseClass.java:62)
+                  <a name="createOrgTest">
+                  </a> <!-- createOrgTest -->
+                  <span class="method-name">createOrgTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at vtiger.OrganizationTestng.CreateOrganizationTest.createOrgTest(CreateOrganizationTest.java:31)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:98)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	... 28 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 25 stack frames
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
+          </div> <!-- suite-Suite-class-failed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\shilp\eclipse-workspace\Vtiger.WCSE14.AutomationFramework\testng_Reggression.xml</span>
+            <span class="header-content">C:\Users\shilp\eclipse-workspace\Vtiger.WCSE14.AutomationFramework\testng_Smoke.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -187,12 +151,12 @@ Caused by: java.net.SocketException: Connection reset
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;groups&gt;
     &lt;run&gt;
-      &lt;include name=&quot;ReggressionSuite&quot;/&gt;
+      &lt;include name=&quot;SmokeSuite&quot;/&gt;
     &lt;/run&gt;
   &lt;/groups&gt;
   &lt;groups&gt;
     &lt;run&gt;
-      &lt;include name=&quot;ReggressionSuite&quot;/&gt;
+      &lt;include name=&quot;SmokeSuite&quot;/&gt;
     &lt;/run&gt;
   &lt;/groups&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
@@ -222,10 +186,10 @@ Caused by: java.net.SocketException: Connection reset
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">ReggressionSuite</span>
+              <span class="test-group-name">SmokeSuite</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">demoTest</span>
+                <span class="method-in-group-name">createOrgTest</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -247,14 +211,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'demoTest')
+data.setCell(0, 1, 'createOrgTest')
 data.setCell(0, 2, 'vtiger.OrganizationTestng.CreateOrganizationTest')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 5146);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -275,7 +239,7 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">vtiger.OrganizationTestng.CreateOrganizationTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">createOrgTest</span>
+                <span class="ignored-method-name">demoTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -293,30 +257,32 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">bcConfig</span>
-                <span class="method-start">329 ms</span>
+                <span class="method-start">227 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">bmConf</span>
-                <span class="method-start">7657 ms</span>
+                <span class="method-start">3358 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">demoTest</span>
-                <span class="method-start">7659 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">createOrgTest</span>
+                <span class="method-start">7227 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">amConfig</span>
-                <span class="method-start">7685 ms</span>
+                <span class="method-start">12718 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">acConfig</span>
-                <span class="method-start">7687 ms</span>
+                <span class="method-start">32933 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">asConfig</span>
-                <span class="method-start">8012 ms</span>
+                <span class="method-start">33663 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
