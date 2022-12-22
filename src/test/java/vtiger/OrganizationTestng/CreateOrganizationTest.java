@@ -28,7 +28,7 @@ public class CreateOrganizationTest extends BaseClass{
 		//Step 4: Click on Organizations Link
 		HomePage hp = new HomePage(driver);
 		hp.clickOnOrganizationLink();
-		Assert.fail();
+		//Assert.fail();
 		
 		//Step 5: click on create organization lookup image
 		OrganizationsPage op = new OrganizationsPage(driver);
