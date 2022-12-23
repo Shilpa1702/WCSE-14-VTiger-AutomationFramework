@@ -13,5 +13,7 @@
     <classes>
       <class name="vtiger.OrganizationTestng.CreateOrganizationTest"/>
     </classes>
-  </test> <!-- Test -->
+     </test> <!-- Test -->
 </suite> <!-- Suite -->
+
+
